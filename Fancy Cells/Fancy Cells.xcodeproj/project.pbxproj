@@ -12,6 +12,10 @@
 		CE7729362C9B059600A0F126 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7729352C9B059600A0F126 /* MainViewController.swift */; };
 		CE77293B2C9B059700A0F126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE77293A2C9B059700A0F126 /* Assets.xcassets */; };
 		CE77293E2C9B059700A0F126 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE77293D2C9B059700A0F126 /* Base */; };
+		CE7729472C9B088A00A0F126 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7729462C9B088A00A0F126 /* MainModel.swift */; };
+		CE77294A2C9B0AA000A0F126 /* CreatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7729492C9B0AA000A0F126 /* CreatureCell.swift */; };
+		CE7729572C9C027900A0F126 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE7729562C9C027900A0F126 /* SnapKit */; };
+		CE77295C2C9C069700A0F126 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77295B2C9C069700A0F126 /* UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,9 @@
 		CE77293A2C9B059700A0F126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE77293D2C9B059700A0F126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE77293F2C9B059700A0F126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7729462C9B088A00A0F126 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		CE7729492C9B0AA000A0F126 /* CreatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatureCell.swift; sourceTree = "<group>"; };
+		CE77295B2C9C069700A0F126 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7729572C9C027900A0F126 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +62,49 @@
 		CE7729302C9B059600A0F126 /* Fancy Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE7729582C9C064500A0F126 /* DesignSystem */,
+				CE7729452C9B087200A0F126 /* Main */,
 				CE7729312C9B059600A0F126 /* AppDelegate.swift */,
 				CE7729332C9B059600A0F126 /* SceneDelegate.swift */,
-				CE7729352C9B059600A0F126 /* MainViewController.swift */,
 				CE77293A2C9B059700A0F126 /* Assets.xcassets */,
 				CE77293C2C9B059700A0F126 /* LaunchScreen.storyboard */,
 				CE77293F2C9B059700A0F126 /* Info.plist */,
 			);
 			path = "Fancy Cells";
+			sourceTree = "<group>";
+		};
+		CE7729452C9B087200A0F126 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CE7729482C9B0A7800A0F126 /* Views */,
+				CE7729352C9B059600A0F126 /* MainViewController.swift */,
+				CE7729462C9B088A00A0F126 /* MainModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CE7729482C9B0A7800A0F126 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE7729492C9B0AA000A0F126 /* CreatureCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE7729582C9C064500A0F126 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				CE7729592C9C066600A0F126 /* Supplements */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		CE7729592C9C066600A0F126 /* Supplements */ = {
+			isa = PBXGroup;
+			children = (
+				CE77295B2C9C069700A0F126 /* UITableViewCell.swift */,
+			);
+			path = Supplements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +123,9 @@
 			dependencies = (
 			);
 			name = "Fancy Cells";
+			packageProductDependencies = (
+				CE7729562C9C027900A0F126 /* SnapKit */,
+			);
 			productName = "Fancy Cells";
 			productReference = CE77292E2C9B059600A0F126 /* Fancy Cells.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +154,9 @@
 				Base,
 			);
 			mainGroup = CE7729252C9B059600A0F126;
+			packageReferences = (
+				CE7729552C9C027900A0F126 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = CE77292F2C9B059600A0F126 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,7 +183,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7729472C9B088A00A0F126 /* MainModel.swift in Sources */,
+				CE77294A2C9B0AA000A0F126 /* CreatureCell.swift in Sources */,
 				CE7729362C9B059600A0F126 /* MainViewController.swift in Sources */,
+				CE77295C2C9C069700A0F126 /* UITableViewCell.swift in Sources */,
 				CE7729322C9B059600A0F126 /* AppDelegate.swift in Sources */,
 				CE7729342C9B059600A0F126 /* SceneDelegate.swift in Sources */,
 			);
@@ -347,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE7729552C9C027900A0F126 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE7729562C9C027900A0F126 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE7729552C9C027900A0F126 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE7729262C9B059600A0F126 /* Project object */;
 }
