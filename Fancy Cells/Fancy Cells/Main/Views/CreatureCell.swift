@@ -9,13 +9,7 @@ import UIKit
 import SnapKit
 
 extension CreatureCell {
-    enum CreatureType {
-        case alive
-        case dead
-        case life
-    }
-    
-    static func prepareCell(tableView: UITableView, indexPath: IndexPath, creatureType: CreatureType?) -> UITableViewCell {
+    static func prepareCell(tableView: UITableView, indexPath: IndexPath, creatureType: MainModel.CreatureType?) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: Self.reuseID,
             for: indexPath
@@ -113,6 +107,7 @@ final class CreatureCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
     override func layoutSubviews() {
         super.layoutSubviews()
         layoutIfNeeded()
@@ -121,7 +116,7 @@ final class CreatureCell: UITableViewCell {
     }
     
     // MARK: - Configuration
-    private func configure(type: CreatureType) {
+    private func configure(type: MainModel.CreatureType) {
         switch type {
         case .alive:
             gradientLayer.colors = Constants.Gradient.alive
@@ -142,6 +137,7 @@ final class CreatureCell: UITableViewCell {
     }
 }
 
+// MARK: - Private functions
 private extension CreatureCell {
     func setupView() {
         clipsToBounds = true

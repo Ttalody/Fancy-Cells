@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         self.window = UIWindow(windowScene: windowScene)
-        let rootVC = MainViewController()
+        let model = MainModel()
+        let rootVC = MainViewController(model: model)
         self.window?.rootViewController = rootVC
         self.window?.makeKeyAndVisible()
     }
